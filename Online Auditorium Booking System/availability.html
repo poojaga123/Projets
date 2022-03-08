@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>booking</title>
+    </head>
+    <body>
+        <h1 style="text-align:center;"><i>Book Your Seminar Hall</i></h1>
+        <table id="customers">
+            <tr>
+                <th>Seminar Hall</th>
+                <th>Capacity</th>
+                <th>Facilities</th>
+                <th>Book Now</th>
+            </tr>
+            <tr>
+                <td><h4 style="text-align:center;">Mechanical AV Hall</h4>
+                <div class="slideshow">
+                <div>
+                <img src="semi1.jpg" height="200px" width="400px" ;>
+                </div>
+                <div><marquee class="marquee">
+                <img src="semi11.jpg"  height="200px" width="400px" ; >
+                <img src="semi1.jpg" height="200px" width="400px";>
+                </div></marquee>
+                </div>
+                </td>
+                <td>60 students</td>
+                <td>Black Board,Projector,Air Conditioner</td>
+                <td><a href="">Click here to Book</td></td>
+                 <tr>
+
+                <td><h4 style="text-align:center;">Mechanical AV Hall</h4>
+                <div class="slideshow">
+                <div>
+                <img src="semi2.jpg" height="200px" width="400px" ;>
+                </div>
+                <div><marquee class="marquee">
+                <img src="semi22.jpg"  height="200px" width="400px" ; >
+                <img src="semi2.jpg" height="200px" width="400px";>
+                </div></marquee>
+                </div>
+                </td>
+                <td>60 students</td>
+                <td>Black Board,Projector,Air Conditioner</td>
+                <td><a href="">Click here to Book</td></td>
+
+                 <tr>
+                <td><h4 style="text-align:center;">Mechanical AV Hall</h4>
+                <div class="slideshow">
+                <div>
+                <img src="semi3.jpg" height="200px" width="400px" ;>
+                </div>
+                <div><marquee class="marquee">
+                <img src="semi33.jpg"  height="200px" width="400px" ; >
+                <img src="semi3.jpg" height="200px" width="400px";>
+                </div></marquee>
+                </div>
+                </td>
+                <td>60 students</td>
+                <td>Black Board,Projector,Air Conditioner</td>
+                <td><a href="">Click here to Book</td></td>
+
+                 <tr>
+                <td><h4 style="text-align:center;">Mechanical AV Hall</h4>
+                <div class="slideshow">
+                <div>
+                <img src="semi4.jpg" height="200px" width="400px" ;>
+                </div>
+                <div><marquee class="marquee">
+                <img src="semi44.jpg"  height="200px" width="400px" ; >
+                <img src="semi4.jpg" height="200px" width="400px";>
+                </div></marquee>
+                </div>
+                </td>
+                <td>60 students</td>
+                <td>Black Board,Projector,Air Conditioner</td>
+                <td><a href="">Click here to Book</td></td>
+
+                 <tr>
+                <td><h4 style="text-align:center;">Mechanical AV Hall</h4>
+                <div class="slideshow">
+                <div>
+                <img src="semi5.jpg" height="200px" width="400px" ;>
+                </div>
+                <div><marquee class="marquee">
+                <img src="semi55.jpg"  height="200px" width="400px" ; >
+                <img src="semi5.jpg" height="200px" width="400px";>
+                </div></marquee>
+                </div>
+                </td>
+                <td>60 students</td>
+                <td>Black Board,Projector,Air Conditioner</td>
+                <td><a href="">Click here to Book</td></td>
+        </table>        
+    </body>
+</html>        
+<style>
+    #customers{
+        font-family:Arial,Helvetica,sans-serif;
+        border-collapse:collapse;
+        width:100%;
+    }
+    #customers td{
+        border:2px solid Black;
+        padding:4px;
+    }
+    #customers tr:nth-child(even){
+        background-color:#f2f2f2;
+    }
+    #customers tr:hover{
+        background-color:rgba(107,132,115,0.8);
+    }
+    #customers th{
+        border:2px solid Black;
+        padding-top:12px;
+        padding-bottom:12px;
+        text-align:left;
+        background-color:MediumSeaGreen;
+        color:white;
+    }
+    .slideshow { 
+  margin: 50px auto; 
+  position: relative; 
+  width: 400px; 
+  height: 200px; 
+  padding: 10px; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+.slideshow > div { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px; 
+}
+.marquee div {
+  display: block;
+  position: absolute;
+  width: 300%;
+  overflow: hidden;
+  animation: marquee 20s linear infinite;
+}
+.marquee div:hover {
+  animation-play-state: paused;
+}
+.marquee span {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+    </style>

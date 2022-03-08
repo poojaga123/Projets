@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+   margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+ .dept{
+   padding: 30px;
+   background: #f1f1f1;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   width: 100%;
+ }
+
+.photo{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+#email_error{
+  margin-top: 5px;
+  width:345px;
+  font-size: 18px;
+  color:#C62828;
+  background: rgba(255,0,0,0.1);
+  text-align:center;
+  padding:5px 8px;
+  border-radius: 3px;
+  border:1px solid;
+}
+</style>
+<script src="script.js"></script>
+</head>
+<body>
+<div class="container"><br>
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+<form id="form" action="#" method="GET" onsubmit="return validation()">
+ 
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email">
+    <span id="email1" class="text-danger font-weight-bold"></span>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw">
+    <span id="password1" class="text-danger font-weight-bold"></span>
+
+    <label for="psw-repeat"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw1" id="psw-repeat">
+    <span id="confirmpass" class="text-danger font-weight-bold"></span>
+
+    <label for="Age"><b>Age</b></label>
+    <input type="text" placeholder="Enter Your Age" name="age" id="age">
+    <span id="age1" class="text-danger font-weight-bold"></span>
+
+    <label><b>Department</b></label><br><br>
+    <div class="dept">
+    <label><input type="checkbox" name="sports" value="MCA">MCA</label><br>
+    <label><input type="checkbox" name="sports" value="MBA">MBA</label><br>
+    <label><input type="checkbox" name="sports" value="MECH">Mechanical</label><br>
+    <label><input type="checkbox" name="sports" value="CIVIL">Civil</label><br>
+    <label><input type="checkbox" name="sports" value="ESC">ESC</label><br>
+    <label><input type="checkbox" name="sports" value="EEC">EEC</label><br>
+    <label><input type="checkbox" name="sports" value="EC">EC</label><br>
+    </div>
+    <label class="photo"><b>Upload Your ID Card Scanned Copy</b><br><input type="file" name="fileupload" accept="image/*"></label><br>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+   <a href="login.html"> <button type="submit" class="registerbtn">Register</button></a>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+</form>
+<script type="text/javascript">
+function validation(){
+    var email=document.getElementById('email').value;
+    var psw=document.getElementById('psw').value;
+    var psw1=document.getElementById('psw-repeat').value;
+    var age=document.getElementById('age').value;
+
+    if(email == " "){
+        document.getElementById('email1').innerHTML="  ** Please fill the email id field";
+        return false;
+    }
+    if(psw == " "){
+        document.getElementById('password1').innerHTML="  ** Please fill the Password field";
+        return false;
+    }
+    if(psw1 == " "){
+        document.getElementById('confirmpass').innerHTML="  ** Please fill the confirm password field";
+        return false;
+    }
+    if(age == " "){
+        document.getElementById('age1').innerHTML="  ** Please fill the age field";
+        return false;
+    }
+}
+
+</script>
+</body>
+</html>

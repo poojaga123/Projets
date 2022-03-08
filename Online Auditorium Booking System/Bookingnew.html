@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin:0;
+                padding: 0;
+                
+            }
+            body{
+                min-height: 100vh;
+                width: 100%;
+                background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(cmr.jpg);
+                height: 100%;
+                background-position: centre;
+                background-repeat: no-repeat;
+                
+            }
+            form{
+                margin:280px;
+                margin-top:100px;
+                margin-left:400px;
+            }
+            h1{
+                font-size:44p;
+                color:darkred;
+            }
+            input{
+                border-radius:10px;
+                border:2px solid black;
+                width:250px;
+                height:35px;
+                text-indent:5px;
+            }
+            input:focus{
+                outline:none;
+            }
+            fieldset{
+                padding-top:10px;
+                border:2px solid green;
+                width:800px;
+                height:600px;
+                background-color: Gray;
+                border-radius: 5px;
+                outline: none;
+            }
+            table{
+                font-size: 22px;
+            }
+            td{
+                line-height:50px;
+            
+            }
+            input[type="submit"]{
+                width:120px;
+                height:30px;
+                background-color: chartreuse;
+                text-align: center;
+            }
+            input[type="submit"]:hover{
+                background-color:darkgreen;
+
+            }
+            input[type="reset"]{
+                width:120px;
+                height:30px;
+                background-color: chartreuse;
+            }
+            input[type="reset"]:hover{
+                background-color:darkgreen;
+            }
+            input[type="button"]{
+                width:120px;
+                height:30px;
+                background-color: chartreuse;
+            }
+        </style>
+        <meta charset="utf-8">
+        <title>
+            Booking Page
+        </title>
+        <script>
+            function Redirect()
+            {
+                window.location="cancel.html"
+            }
+        </script>
+        <script>
+            function message()
+            {
+                alert("Your Booking is Successfully done!");
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+            <form>
+                <fieldset>
+                    <table>
+                        <h1>Booking Form</h1>
+                        <tr>
+                            <th>Name</th>
+                            <td>:</td>
+                            <td><input type="text" name="name" id="name1" placeholder="Enter your name"></td>
+                        </tr>
+                        <tr>
+                            <th>Email Id</th>
+                            <td>:</td>
+                            <td><input type="email" name="email" id="email1" placeholder="Enter your Email"></td>
+                        </tr>
+                        <tr>
+                            <th>Contact No</th>
+                            <td>:</td>
+                            <td><input type="number" name="number" id="number1" placeholder="Enter your number"></td>
+                        </tr>
+                        <tr>
+                            <th>Department</th>
+                            <td>:</td>
+                            <td><input type="text" name="department" id="department" placeholder="Enter your department"></td>
+                        </tr>
+                        <tr>
+                            <th>Booking purpose</th>
+                            <td>:</td>
+                            <td><input type="text" name="purpose" id="purpose" placeholder="Enter your purpose"></td>
+                        </tr>
+                        <tr>
+                            <th>From Date</th>
+                            <td>:</td>
+                            <td><input type="date" name="date" id="date1"></td>
+                        </tr>
+                        <tr>
+                            <th>To Date</th>
+                            <td>:</td>
+                            <td><input type="date" name="to date" id="todate1"></td>
+                        </tr>
+                        <tr>
+                            <th> Starting Time</th>
+                            <td>:</td>
+                            <td><input type="time"></td>
+                        </tr>
+                        <tr>
+                            <th>Ending Time</th>
+                            <td>:</td>
+                            <td><input type="time"></td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td>:</td>
+                            <td><input type="text" name="description" id="description1" placeholder="Write description"></td>
+                        </tr>
+                        <div>
+                            <tr>
+                                <td>
+                                    <input type="button" value="Book" name="Book" onclick="message();"/>
+                                    <input type="submit" value="update" name="update" id="update1">
+                                    <input type="reset" value="Cancel" name="cancel" id="cancle1">
+                                    <input type="button" value="Delete" name="delete" onclick="Redirect();"/>
+                                </td> 
+                          </tr>  
+                        </div>
+                    </table>
+                </fieldset>
+            </form>
+        </center>
+    </body>
+</html>       
