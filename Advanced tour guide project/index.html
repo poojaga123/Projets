@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   </head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">WeVisit>></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="Places.html">Places</a></li>
+        <li><a href="book.html">Book Now</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="img"></div>
+  <div class="center">
+    <div class="title">LIFE IS MEANT FOR TRAVELLING</div>
+    <div class="sub_title"><span id='change'>WeVisit>></span> AT YOUR SERVICE</div>
+    <div class="btns">
+      <button>LETS GO</button>
+      <button>LEARN MORE</button>
+    </div>
+  </div>
+</div>
+<div id="dvImage" style="height: 308px; width: 410px">
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var images = ["images/bg1.jpg","images/bg2.jpg","images/bg3.jpg"];
+        var cout = 1;
+        $('body').css('background-image', 'url("' + images[0] + '")');
+        $('body').css('background-repeat', 'no-repeat');
+        $('body').css('background-size', 'cover');
+        $('body').css('width', '100%');
+        $('body').css('background-position', 'center');
+        $('body').css('position', 'relative');
+        $('body').css('height', '100vh');
+  setInterval(function() {
+        $('body').css('background-image', 'url("' + images[cout] + '")');
+        $('body').css('background-repeat', 'no-repeat');
+        $('body').css('background-size', 'cover');
+        $('body').css('background-position', 'center');
+        $('body').css('position', 'relative');
+        $('body').css('width', '100%');
+        $('body').css('height', '100vh');
+    cout == images.length-1 ? cout = 0 : cout++;
+  }, 5000);
+
+});
+
+</script>
+</body>
+</html>
